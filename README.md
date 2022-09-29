@@ -7,4 +7,4 @@
 В каждом табе отображать список изображений.
 Состояние скролла должен сохраняться.
 
-<img width="380" alt="Снимок экрана 2022-09-29 в 20 26 39" src="https://user-images.githubusercontent.com/57398072/193101574-ced5b908-58ae-443a-85ea-265be8c042f8.png">
+<img width="352" alt="Снимок экрана 2022-09-29 в 22 49 39" src="https://user-images.githubusercontent.com/57398072/193128189-637eb924-576f-4323-8ac9-fd9534c3d3b2.png">
