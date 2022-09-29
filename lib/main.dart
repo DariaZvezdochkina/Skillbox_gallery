@@ -28,32 +28,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<String> tabs = ['Галерея', 'Мои фото'];
-  final List fakeData = List.generate(100, (index) => index.toString());
 
   Map<String, dynamic> data = {
     'Мои фото': [
-      'https://picsum.photos/1200/501',
-      'https://picsum.photos/1200/502',
-      'https://picsum.photos/1200/503',
-      'https://picsum.photos/1200/504',
-      'https://picsum.photos/1200/505',
-      'https://picsum.photos/1200/506',
-      'https://picsum.photos/1200/507',
-      'https://picsum.photos/1200/508',
-      'https://picsum.photos/1200/509',
-      'https://picsum.photos/1200/510',
+      'https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_jõgi_Lahemaal.jpg',
+      'https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000',
     ],
     'Галерея': [
-      'https://picsum.photos/1200/511',
-      'https://picsum.photos/1200/512',
-      'https://picsum.photos/1200/513',
-      'https://picsum.photos/1200/514',
-      'https://picsum.photos/1200/515',
-      'https://picsum.photos/1200/516',
-      'https://picsum.photos/1200/517',
-      'https://picsum.photos/1200/518',
-      'https://picsum.photos/1200/519',
-      'https://picsum.photos/1200/520',
+      'https://wallpaperaccess.com/full/1131217.jpg',
+      'https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?cs=srgb&dl=pexels-pixabay-414102.jpg&fm=jpg',
+      'https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg',
     ]
   };
 
@@ -76,7 +61,13 @@ class _MyHomePageState extends State<MyHomePage> {
             return ListView(
               key: PageStorageKey(name),
               children: <Widget>[
-                ...data[name].map((value) => Image.network(value.toString()))
+                ...data[name].map((value) => Card(
+                      margin: const EdgeInsets.all(8),
+                      child: Image.network(
+                        value,
+                        fit: BoxFit.cover,
+                      ),
+                    ))
               ],
             );
           }).toList(),
